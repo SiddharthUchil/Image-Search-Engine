@@ -1,6 +1,5 @@
 # Prediction Endpoint
-This Repository is a prediction endpoint for Reverse Image Search Engine. With the use of gitHub actions 
-I have configured CI-CD on the main branch. If any changes happens in Main branch it will deploy it on ec2 instance.
+This project aims to create a reverse image search engine that can find similar or related images on the web based on an input image. The project uses computer vision, a subdomain of artificial intelligence, to analyze and extract data from digital images.
 
 ## Architectures 
 ![EndpointArchitecture](https://user-images.githubusercontent.com/40850370/194845911-ea1b68f5-22db-4190-ab94-eca46f6a9d37.png)
