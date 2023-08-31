@@ -1,5 +1,11 @@
 # Prediction Endpoint
-This project aims to create a reverse image search engine that can find similar or related images on the web based on an input image. The project uses computer vision, a subdomain of artificial intelligence, to analyze and extract data from digital images.
+This project is designed to develop a sophisticated reverse image search engine capable of retrieving similar or related images from vast web sources in response to an input image. This endeavor uses the advanced technology of computer vision - a significant subfield of artificial intelligence, to interpret and extract valuable data from digital images. 
+
+Our project is split into two distinct parts, each with a separate repository. The data collection repository, **Embedding Based Image Search Engine** ([link](https://github.com/SiddharthUchil/image-search-data-collection)), is designed for image data ingestion. This is the bedrock of the project, capturing and cataloguing a diverse range of images that our search engine will later reference. 
+
+The second part of the project is encapsulated in a separate repository, named as **ModelTrainer** ([link](https://github.com/SiddharthUchil/image-search-model-trainer)). This repository focuses on the critical process of model training. Utilizing the power of the Paperspace GPU Instance with a high configuration, we have structured a continuous training pipeline that enhances the efficacy of our image search engine. However, to control costs, this instance is kept in an off state by default. To use the training endpoint, you need to manually trigger the workflow to initiate the training process.
+
+Following the success of these two modules, our reverse image search engine will be capable of sophisticated image matching and retrieval, representing the combined efforts of advanced machine learning technologies and a highly refined dataset. Both repositories interrelate, symbolizing the intricate development process that ultimately results in a high-performing reverse image search engine. Developers are encouraged to explore both repositories, gaining insight into the process of data collection and the implementation of a highly accurate model training workflow.
 
 ## Architectures 
 ![EndpointArchitecture](https://user-images.githubusercontent.com/40850370/194845911-ea1b68f5-22db-4190-ab94-eca46f6a9d37.png)
@@ -7,6 +13,7 @@ This project aims to create a reverse image search engine that can find similar 
 
 ## User Interface
 ![plot](snippets/snip1.png)
+![plot](snippets/snip3.png)
 
 ## Infrastructure Needed
 1. GitHub Actions
@@ -26,13 +33,4 @@ export AWS_BUCKET_NAME=<bucket-name>
 
 export AWS_ECR_LOGIN_URI=<ecr-login-uri>
 export ECR_REPOSITORY_NAME=<ecr-repository-name>
-```
-
-## Cost Involved
-```text
-EC2 Instance : 	2vCPUs $0.0928 	On-Demand Price/hr*
-ECR Repository : Storage is $0.10 per GB / month for data stored in private or public repositories.
-    Data Transfer IN : $0.00 per GB
-    Data Transfer OUT **: $0.1093 per GB / Next 9.999 TB / month
-S3 Standard: $0.025 per GB / First 50 TB / Month
 ```
